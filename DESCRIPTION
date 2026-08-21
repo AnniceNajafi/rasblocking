@@ -1,0 +1,22 @@
+Package: rasblocking
+Title: Scoring, Verification and Structural Diagnostics for Railroad Blocking Plans
+Version: 0.1.0
+Authors@R: person("Annice", "Najafi", role = c("aut", "cre"),
+                  email = "annicenajafi27@gmail.com")
+Description: Tools for the railroad blocking problem as posed by the INFORMS RAS
+    2026 Problem Solving Competition. Provides an exact reimplementation of the
+    competition objective and its eleven feasibility checks, two independent
+    verification gates that reject payloads which pass every feasibility check
+    while misreporting their own cost, structural diagnostics that certify which
+    demand is unservable by any feasible design, and the destination-pooling
+    construction used to serve sub-tier demand. Reads any instance in the
+    General Modeling Network Specification (GMNS) node/link format, so the
+    diagnostics apply to networks beyond the competition instances. Depends on
+    no mathematical programming solver and no Python.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports: data.table, jsonlite, igraph, stats, utils
+Suggests: testthat (>= 3.0.0), shiny, bslib, DT, ggplot2
+Config/testthat/edition: 3
+RoxygenNote: 7.3.3
